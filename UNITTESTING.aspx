@@ -10,6 +10,8 @@
     <form id="form1" runat="server">
     <div>
     
+        <span id="DisplayData" runat="server"></span>
+
     </div>
     </form>
 </body>

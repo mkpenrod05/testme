@@ -25,6 +25,11 @@ namespace testme
 
             QuestionDataAccess questionDataAccess = new QuestionDataAccess();
             questionDataAccess.InsertNewQuestion_UNITTEST();
+
+            DataAccessResult d = new DataAccessResult();
+            d = (DataAccessResult)Session["d"];
+
+            
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using testme;
+using testme.Models;
 
 namespace testme
 {
@@ -28,6 +29,25 @@ namespace testme
         void Application_Error(object sender, EventArgs e)
         {
             // Code that runs when an unhandled error occurs
+
+        }
+
+        public void Session_OnStart()
+        {
+            //Create the user session here.
+            User user = new User();
+            Session["user"] = user;
+
+            //After the user logs in, set the attributes of the user.
+            //This will happen on another page.
+            User LoggedInUser = new User();
+            LoggedInUser = (User)Session["user"];
+
+
+        }
+
+        public void Session_OnEnd()
+        {
 
         }
     }
